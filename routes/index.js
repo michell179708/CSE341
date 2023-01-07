@@ -4,7 +4,7 @@ routes.get('/', (req, res) => {
   res.send('Michell Herrera');
 });
 routes.get('/test', (req, res) => {
-  res.send('Dariela Herrera');
+  res.send('Carlos Martinez');
 });
 
 module.exports = routes;
