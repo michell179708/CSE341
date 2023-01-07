@@ -6,7 +6,7 @@ routes.get('/', (req, res) => {
 routes.get('/test', (req, res) => {
   res.send('Dariela Herrera');
 });
-routes.get('/test2', (req, res) => {
+routes.get('/testdos', (req, res) => {
   res.send('Carlos Martinez');
 });
 
