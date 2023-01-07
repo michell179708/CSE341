@@ -6,6 +6,9 @@ routes.get('/', (req, res) => {
 routes.get('/test', (req, res) => {
   res.send('Dariela Herrera');
 });
+routes.get('/test2', (req, res) => {
+  res.send('Carlos Martinez');
+});
 
 module.exports = routes;
 
