@@ -96,4 +96,5 @@ const getSingle = async (req, res, next) => {
   // };
 
  
-module.exports = { getAll, getSingle, createContact, updateContact, deleteContact };
+// module.exports = { getAll, getSingle, createContact, updateContact, deleteContact };
+module.exports = { getAll, getSingle, createContact, updateContact };
