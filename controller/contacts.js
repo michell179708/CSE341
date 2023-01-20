@@ -69,7 +69,7 @@ const getSingle = async (req, res, next) => {
 
 
 const updateContact = async (req, res) => {
-	console.log('updateContact started');
+	//console.log('updateContact started');
 	const userId = new ObjectId(req.params.id);
 	const newInfo = {
 		firstName: req.body.firstName,
@@ -85,10 +85,10 @@ const updateContact = async (req, res) => {
 		.replaceOne({ _id: userId }, newInfo);
 	if (response.acknowledged) {
 		res.status(204).json(response);
-		console.log('Info saved to DB succesfully');
+		//console.log('Info saved to DB succesfully');
 	} else {
 		res.status(500).json(response.error || 'Some error occurred while creating the contact.');
-		console.log('Upload of info failed.');
+	//	console.log('Upload of info failed.');
 	}
 };
 

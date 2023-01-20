@@ -27,7 +27,7 @@ PUT http://localhost:3000/contacts/63caab064c1d7b3066fdb5ed HTTP/1.1
 content-type: application/json
 
 {
-    "firstName":"rodolfo2", 
+    "firstName":"rodolfo3", 
     "lastName":"mar", 
     "email":"prueba@test.com", 
     "favoriteColor":"green",
