@@ -94,7 +94,7 @@ const getSingle = async (req, res, next) => {
   //     res.status(500).json(response.error || 'Some error occurred while deleting the contact.');
   //   }
   // };
-
+  
  
 // module.exports = { getAll, getSingle, createContact, updateContact, deleteContact };
 module.exports = { getAll, getSingle, createContact, updateContact };
