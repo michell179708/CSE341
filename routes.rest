@@ -23,7 +23,7 @@ content-type: application/json
 ### DISPLAY CONTACTS LIST
 GET http://localhost:3000/contacts
 ###Update a contact 
-PUT http://localhost:3000/contacts/63c0b70385d718560e52d1e9 HTTP/1.1
+PUT http://michi341test.onrender.com/contacts/63c0b70385d718560e52d1e9 HTTP/1.1
 content-type: application/json
 
 {
@@ -33,42 +33,6 @@ content-type: application/json
     "favoriteColor":"green",
     "birthday":"06/19/2003"
 }
-
-
-
-
-
-
-### PUT contact 
-PUT http://localhost:3000/contacts/63c0b70385d718560e52d1e9 HTTP/1.1
-content-type: application/json
-
-{
-    "firstName":"Dale",
-    "lastName":"Anderson", 
-    "email":"danderson@test.com", 
-    "favoriteColor":"Yellow", 
-    "birthday":"02/24/91"
-}
-
-
-
-### PUT contact 
-PUT http://localhost:3000/contacts/63c0b70385d718560e52d1e9 HTTP/1.1
-content-type: application/json
-
-{
-    "firstName":"Dale",
-    "lastName":"Anderson", 
-    "email":"danderson@test.com", 
-    "favoriteColor":"Yellow", 
-    "birthday":"02/24/91"
-}
-
-
-
-
-
 
 
 
