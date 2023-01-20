@@ -56,44 +56,43 @@ const getSingle = async (req, res, next) => {
   };
   
 
-  const updateContact = async (req, res) => {
-    console.log('updateContact started');
-    const userId = new ObjectId(req.params.id);
-    // be aware of updateOne if you only want to update specific fields
-    const contact = {
-      firstName: req.body.firstName,
-      lastName: req.body.lastName,
-      email: req.body.email,
-      favoriteColor: req.body.favoriteColor,
-      birthday: req.body.birthday
-    };
-    console.log('info saved');
-    const response = await mongodb
-      .getDb()
-      .db()
-      .collection('contacts')
-      .replaceOne({ _id: userId }, contact);
-    console.log(response);
-    console.log('conection done');
-    if (response.modifiedCount > 0) {
-      res.status(204).send();
-      console.log('updateContact finished succesfully');
-    } else {
-      res.status(500).json(response.error || 'Some error occurred while updating the contact.');
-      console.log('updateContact FAILED');
-    }
-  };
 
-  // const deleteContact = async (req, res) => {
-  //   const userId = new ObjectId(req.params.id);
-  //   const response = await mongodb.getDb().db().collection('contacts').remove({ _id: userId }, true);
-  //   console.log(response);
-  //   if (response.deletedCount > 0) {
-  //     res.status(204).send();
-  //   } else {
-  //     res.status(500).json(response.error || 'Some error occurred while deleting the contact.');
-  //   }
-  // };
+
+
+// --------------------------------------------------
+
+
+
+
+
+
+
+
+const updateContact = async (req, res) => {
+	console.log('updateContact started');
+	const userId = new ObjectId(req.params.id);
+	const newInfo = {
+		firstName: req.body.firstName,
+		lastName: req.body.lastName,
+		email: req.body.email,
+		favoriteColor: req.body.favoriteColor,
+		birthday: req.body.birthday
+	};
+	const response = await mongodb    
+		.getDb()
+		.db()
+		.collection('contacts')
+		.replaceOne({ _id: userId }, newInfo);
+	if (response.acknowledged) {
+		res.status(204).json(response);
+		console.log('Info saved to DB succesfully');
+	} else {
+		res.status(500).json(response.error || 'Some error occurred while creating the contact.');
+		console.log('Upload of info failed.');
+	}
+};
+
+
   
  
 // module.exports = { getAll, getSingle, createContact, updateContact, deleteContact };

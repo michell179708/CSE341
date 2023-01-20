@@ -23,11 +23,11 @@ content-type: application/json
 ### DISPLAY CONTACTS LIST
 GET http://localhost:3000/contacts
 ###Update a contact 
-PUT http://michi341test.onrender.com/contacts/63c0b70385d718560e52d1e9 HTTP/1.1
+PUT http://localhost:3000/contacts/63caab064c1d7b3066fdb5ed HTTP/1.1
 content-type: application/json
 
 {
-    "firstName":"rodolfo", 
+    "firstName":"rodolfo2", 
     "lastName":"mar", 
     "email":"prueba@test.com", 
     "favoriteColor":"green",
@@ -35,18 +35,3 @@ content-type: application/json
 }
 
 
-
-##Delete contact 
-DELETE http://localhost:3000/contacts/63c737bbce7afcc39e1eda3b HTTP/1.1
-content-type: application/json
-
-
-// PRODUCTION Deploy
-###
-GET https://cse341-instructor.herokuapp.com/contacts
-###
-GET https://cse341-instructor.herokuapp.com/contacts/622023f642f9ab4cd6e060b2
-###
-GET https://cse341-instructor.herokuapp.com/contacts/622023f642f9ab4cd6e060b3
-###
-GET https://cse341-instructor.herokuapp.com/contacts/622023f642f9ab4cd6e060b4
