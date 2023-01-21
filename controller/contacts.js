@@ -97,7 +97,7 @@ const deleteContact = async (req, res) => {
   .deleteOne({ _id: userIdDelete}, true);
   console.log('contactDelete');
   if (response.acknowledged) {
-    res.status(204).json(response);
+    res.status(200).json(response);
   } else {
     res
       .status(500)
