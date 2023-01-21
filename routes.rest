@@ -9,7 +9,6 @@ GET http://localhost:3000/contacts/63c0b70385d718560e52d1e8
 GET http://localhost:3000/contacts/63c0b70385d718560e52d1e9
 
 ##### Create a new user 
-
 POST http://localhost:3000/contacts/ HTTP/1.1 
 content-type: application/json
 
@@ -20,8 +19,8 @@ content-type: application/json
 "favoriteColor":"Brown",
  "birthday":"06/19/2000"
 }
-### DISPLAY CONTACTS LIST
-GET http://localhost:3000/contacts
+
+
 ###Update a contact 
 PUT http://localhost:3000/contacts/63caab064c1d7b3066fdb5ed HTTP/1.1
 content-type: application/json
@@ -34,4 +33,7 @@ content-type: application/json
     "birthday":"06/19/2003"
 }
 
+###delete a contact 
 
+DELETE http://localhost:3000/contacts/63c736a89f6e247eeed8953b  HTTP/1.1
+content-type: application/json
