@@ -3,6 +3,7 @@ const mongodb = require("../db/connect");
 const ObjectId = require("mongodb").ObjectId;
 
 const getAll = async (req, res, next) => {
+  // #swagger.tags = ['GetallContacts']
   const result = await mongodb.getDb().db().collection("contacts").find();
   result.toArray().then((lists) => {
     res.setHeader("Content-Type", "application/json");
@@ -11,6 +12,7 @@ const getAll = async (req, res, next) => {
 };
 
 const getSingle = async (req, res, next) => {
+  // #swagger.tags = ['GetonlyOneContact']
   const userId = new ObjectId(req.params.id);
   const result = await mongodb
     .getDb()
@@ -33,6 +35,7 @@ const getSingle = async (req, res, next) => {
 //funcion que crea un contacto
 //1
 const createContact = async (req, res, next) => {
+  // #swagger.tags = ['CreateContact']
   const newcontact = {
     firstName: req.body.firstName,
     lastName: req.body.lastName,
@@ -62,6 +65,7 @@ const createContact = async (req, res, next) => {
 //*************Function to update a contact************************************************ */
 
 const updateContact = async (req, res) => {
+  // #swagger.tags = ['UpdateContact']
   const userId = new ObjectId(req.params.id);
   const newInfo = {
     firstName: req.body.firstName,
@@ -89,6 +93,7 @@ const updateContact = async (req, res) => {
 
 /**************funcion para delete un contacto ************************************ */
 const deleteContact = async (req, res) => {
+  // #swagger.tags = ['DeleteContact']
   const userIdDelete = new ObjectID (req.params.id);
   const response = await mongodb
   .getDb()
